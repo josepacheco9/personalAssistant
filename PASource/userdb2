@@ -1,0 +1,14 @@
+create database if not exists userdb;
+use userdb;
+create table if not exists `s_chat_messages` (
+`id` int(11) not null auto_increment,
+`user` varchar(255) not null,
+`message` varchar(255) not null,
+`when` int(11) not null,
+PRIMARY KEY (`id`)
+) engine=MyISAM Default charset=utf8;
+
+insert into s_chat_messages (`id`, `user`, `message`, `when`) values
+(1, 'User1', 'Hello', 1),
+(2, 'User2', 'Hi', 2),
+(3, 'User3', 'My name is Bob', 2);
